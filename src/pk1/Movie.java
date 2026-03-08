@@ -76,15 +76,15 @@ public class Movie implements Comparable <Movie>{
 
     @Override
     public String toString() {
-        return String.format(
+        return
                 "\n" +
-                        " ID       : %-28s \n" + movieId,
-                        " Title    : %-28s \n" + title,
-                        "Director : %-28s \n" + director,
-                        "Year     : %-28d \n" + releaseYear,
-                        "Rating   : %-28.1f/5.0 \n" + rating,
-                        "Language : %-28s \n" + language,
-                        "Category : %-28s \n" + category
-        );
+                        " ID       : " + movieId+ "\n" +
+                        " Title    : " + title+ "\n" +
+                        "Director : " + director + "\n" +
+                        "Year     : " + releaseYear+ "\n" +
+                        "Rating   : " + rating + "\n" +
+                        "Language :" + language + "\n" +
+                        "Category : " + category ;
+
     }
 }
