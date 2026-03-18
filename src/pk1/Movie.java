@@ -10,13 +10,25 @@ public class Movie implements Comparable <Movie>{
     private String language;
     private Category category;
 
-    private static int ID = 001;
+    private static int ID = 1;
+
+    public Movie(String title, String director, int releaseYear,
+                 double rating, String language, Category category) {
+
+        this.movieId = "MOV" + String.format("%03d", ID++); // MOV001, MOV002...
+        this.title = title;
+        this.director = director;
+        this.releaseYear = releaseYear;
+        this.rating = rating;
+        this.language = language;
+        this.category = category;
+    }
 
     @Override
     public int compareTo(Movie other) {
-        // Sort by rating in DESCENDING order (5 stars first, 1 star last)
-        return 0;
-                //Double.compare(other.rating, this.rating);
+
+        return Double.compare(other.rating, this.rating);
+
     }
     public String getMovieId() {
         return movieId;
